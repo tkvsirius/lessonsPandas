@@ -1,0 +1,189 @@
+@startuml
+left to right direction
+skinparam ArrowColor #666
+skinparam linetype polyline
+skinparam defaultFontName Helvetica
+hide empty members
+rectangle "Spider" as S_b4d68660 #E8F5E9
+rectangle "БФ-9" as S_b2c93123 #E8F5E9
+rectangle "В процессе исправления ошибок в доставке данных из 1С в КХД" as S_ee021d8d #E8F5E9
+rectangle "Выгрузка из 1С" as S_88b81d7f #E8F5E9
+rectangle "Выгрузка из СКУД" as S_8cab65da #E8F5E9
+rectangle "Отчет SP (план + факт)" as S_09c3a61a #E8F5E9
+rectangle "Отчет по ежедневным заявкам (факт)" as S_7ff6c8db #E8F5E9
+rectangle "Отчет по месячный заявкам (план)" as S_da46bed1 #E8F5E9
+rectangle "Отчет по месячный заявкам (факт)" as S_4b0a7eb8 #E8F5E9
+rectangle "План_Факт_2_полугодия_2025_г_по_списанию_по_подразделениям_ССР.xlsx" as S_80e08027 #E8F5E9
+rectangle "Производственный_план-факт_2025_года.xlsx" as S_8c39c93c #E8F5E9
+rectangle "Расширенная выгрузка из СКУД" as S_4c136a10 #E8F5E9
+rectangle "Файлы .xlsx с графиком отпусков" as S_db24b269 #E8F5E9
+rectangle "больничных и командировок сотрудников" as S_0dce94e9 #E8F5E9
+rectangle "МиМ" as E_0d5e9cd7 #FFF3E0
+rectangle "Персонал" as E_7e33db52 #FFF3E0
+rectangle "Финансовые показатели" as E_bda100aa #FFF3E0
+rectangle "0. Затраты Невыборка" as M_565e4a53 #E3F2FD
+rectangle "БДДС-​--Оплата ГрПП-​--Материалы и оборудование поставки ГрПП" as M_7fb3542e #E3F2FD
+rectangle "БДДС-​--Оплата ГрПП-​--Расходы на персонал" as M_abf3e49f #E3F2FD
+rectangle "БДДС-​--Оплата аванса-​--Оплата аванса" as M_34ed0632 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту УФК-​--Оплаты по проекту УФК" as M_dd620ca1 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Аренда" as M_ae890318 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--ИТ, СРО, Лицензии, Консалтинг" as M_84417740 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Командировочные расходы" as M_030af046 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Материалы и оборудование поставки ГрПП" as M_21c522fc #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Материалы и оборудование прочих поставщиков" as M_9b1c7662 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Машины и механизмы" as M_a67f7d77 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Налоги, взносы, сборы, пени, штрафы" as M_0eb2933c #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Оплаты по проекту" as M_f67a74e4 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Оформление разрешительной документации" as M_6bd3217c #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Погашение основного долга по займам" as M_49ed5e6b #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Прочие расходы" as M_2dd98002 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Расходы на персонал" as M_1ab3c2a1 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Содержание офиса, площадки и стройгородка" as M_b0a490a4 #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Субподрядные работы" as M_9d337ade #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--Транспортные услуги" as M_06dd7c5d #E3F2FD
+rectangle "БДДС-​--Оплаты по проекту-​--ФОТ с НДФЛ и страховыми взносами" as M_6138df23 #E3F2FD
+rectangle "БДДС-​--Перевод с Л/С на Р/С-​--Перевод с Л/С на Р/С" as M_cd9eb8e3 #E3F2FD
+rectangle "БДДС-​--Поступления от заказчика УФК-​--Оплата по КС-2" as M_8d27e8b4 #E3F2FD
+rectangle "БДДС-​--Поступления от заказчика УФК-​--Поступления от заказчика УФК" as M_dc2a8884 #E3F2FD
+rectangle "БДДС-​--Поступления по проекту-​--Доходы от сдачи в аренду ОФ" as M_59e32897 #E3F2FD
+rectangle "БДДС-​--Поступления по проекту-​--Оплата аванса" as M_7ec4121e #E3F2FD
+rectangle "БДДС-​--Поступления по проекту-​--Оплата по КС-2" as M_73cd6ea4 #E3F2FD
+rectangle "БДДС-​--Поступления по проекту-​--Поступления от реализации материалов" as M_d8ea8485 #E3F2FD
+rectangle "БДДС-​--Поступления по проекту-​--Прочие операционные поступления" as M_e2e37362 #E3F2FD
+rectangle "БДДС-​--в т.ч. Выплаченный аванс УФК-​--в т.ч. Выплаченный аванс УФК" as M_69713a33 #E3F2FD
+rectangle "БДДС-​--в т.ч. Выплаченный аванс-​--Оплата аванса" as M_8f08ed4f #E3F2FD
+rectangle "БДДС-​--в т.ч. Выплаченный аванс-​--Оплата по КС-2" as M_31d4efec #E3F2FD
+rectangle "Выработка" as M_ff17c53a #E3F2FD
+rectangle "Дебиторка" as M_51b32f06 #E3F2FD
+rectangle "Материалы и оборудование поставки ГрПП" as M_a859f259 #E3F2FD
+rectangle "Материалы и оборудование прочих поставщиков" as M_e00732a6 #E3F2FD
+rectangle "Машины и механизмы" as M_c8daccad #E3F2FD
+rectangle "НДФЛ" as M_2809fe8a #E3F2FD
+rectangle "Наименование техники" as M_49ccd053 #E3F2FD
+rectangle "Накладные расходы СД" as M_c86abba8 #E3F2FD
+rectangle "Накладные расходы ЦО" as M_4142a708 #E3F2FD
+rectangle "Накладные расходы объекта" as M_d722c7b9 #E3F2FD
+rectangle "Рабочее время" as M_fb9cb729 #E3F2FD
+rectangle "Расходы на МиМ" as M_3f662c39 #E3F2FD
+rectangle "Реализация" as M_e3a7c980 #E3F2FD
+rectangle "Себестоимость" as M_cc32c68e #E3F2FD
+rectangle "Себестоимость 1С-​--Амортизация" as M_761b5066 #E3F2FD
+rectangle "Себестоимость 1С-​--Аренда" as M_3442d333 #E3F2FD
+rectangle "Себестоимость 1С-​--Дебиторская задолженность" as M_bee6136f #E3F2FD
+rectangle "Себестоимость 1С-​--ИТ, СРО, Лицензии, Консалтинг" as M_bc013853 #E3F2FD
+rectangle "Себестоимость 1С-​--Командировочные расходы" as M_ae91eb15 #E3F2FD
+rectangle "Себестоимость 1С-​--Материалы и оборудование поставки ГрПП" as M_a2980881 #E3F2FD
+rectangle "Себестоимость 1С-​--Материалы и оборудование прочих поставщиков" as M_36f304fd #E3F2FD
+rectangle "Себестоимость 1С-​--Машины и механизмы" as M_67e81036 #E3F2FD
+rectangle "Себестоимость 1С-​--НДФЛ" as M_73d9aebf #E3F2FD
+rectangle "Себестоимость 1С-​--Накладные расходы СД" as M_1d2a5595 #E3F2FD
+rectangle "Себестоимость 1С-​--Накладные расходы ЦО" as M_498c4352 #E3F2FD
+rectangle "Себестоимость 1С-​--Накладные расходы объекта" as M_17cd1ff9 #E3F2FD
+rectangle "Себестоимость 1С-​--Налоги, взносы, сборы, пени, штрафы" as M_2eff6bd8 #E3F2FD
+rectangle "Себестоимость 1С-​--Остатки общие" as M_3c05a1db #E3F2FD
+rectangle "Себестоимость 1С-​--Оформление разрешительной документации" as M_f7e8ef26 #E3F2FD
+rectangle "Себестоимость 1С-​--Прочие расходы" as M_7d8894dd #E3F2FD
+rectangle "Себестоимость 1С-​--Расходы на персонал" as M_70437c5e #E3F2FD
+rectangle "Себестоимость 1С-​--Содержание офиса, площадки и стройгородка" as M_0a029370 #E3F2FD
+rectangle "Себестоимость 1С-​--Страховые взносы" as M_a2485d5e #E3F2FD
+rectangle "Себестоимость 1С-​--Субподрядные работы" as M_8abc5755 #E3F2FD
+rectangle "Себестоимость 1С-​--Транспортные услуги" as M_688c1018 #E3F2FD
+rectangle "Себестоимость 1С-​--ФОТ" as M_dcfbc632 #E3F2FD
+rectangle "Страховые взносы" as M_874b857e #E3F2FD
+rectangle "Субподрядные работы" as M_9b16c8d7 #E3F2FD
+rectangle "ТМЦ" as M_b8e6fc1d #E3F2FD
+rectangle "ФОТ" as M_3e9a0188 #E3F2FD
+rectangle "Часы МиМ" as M_61cabdb4 #E3F2FD
+rectangle "Численность" as M_f6073895 #E3F2FD
+rectangle "Штатное расписание" as M_7ffd39dd #E3F2FD
+E_0d5e9cd7 --> M_3f662c39
+E_0d5e9cd7 --> M_49ccd053
+E_0d5e9cd7 --> M_61cabdb4
+E_7e33db52 --> M_3e9a0188
+E_7e33db52 --> M_7ffd39dd
+E_7e33db52 --> M_f6073895
+E_7e33db52 --> M_fb9cb729
+E_bda100aa --> M_030af046
+E_bda100aa --> M_06dd7c5d
+E_bda100aa --> M_0a029370
+E_bda100aa --> M_0eb2933c
+E_bda100aa --> M_17cd1ff9
+E_bda100aa --> M_1ab3c2a1
+E_bda100aa --> M_1d2a5595
+E_bda100aa --> M_21c522fc
+E_bda100aa --> M_2809fe8a
+E_bda100aa --> M_2dd98002
+E_bda100aa --> M_2eff6bd8
+E_bda100aa --> M_31d4efec
+E_bda100aa --> M_3442d333
+E_bda100aa --> M_34ed0632
+E_bda100aa --> M_36f304fd
+E_bda100aa --> M_3c05a1db
+E_bda100aa --> M_3e9a0188
+E_bda100aa --> M_4142a708
+E_bda100aa --> M_498c4352
+E_bda100aa --> M_49ed5e6b
+E_bda100aa --> M_51b32f06
+E_bda100aa --> M_565e4a53
+E_bda100aa --> M_59e32897
+E_bda100aa --> M_6138df23
+E_bda100aa --> M_67e81036
+E_bda100aa --> M_688c1018
+E_bda100aa --> M_69713a33
+E_bda100aa --> M_6bd3217c
+E_bda100aa --> M_70437c5e
+E_bda100aa --> M_73cd6ea4
+E_bda100aa --> M_73d9aebf
+E_bda100aa --> M_761b5066
+E_bda100aa --> M_7d8894dd
+E_bda100aa --> M_7ec4121e
+E_bda100aa --> M_7fb3542e
+E_bda100aa --> M_84417740
+E_bda100aa --> M_874b857e
+E_bda100aa --> M_8abc5755
+E_bda100aa --> M_8d27e8b4
+E_bda100aa --> M_8f08ed4f
+E_bda100aa --> M_9b16c8d7
+E_bda100aa --> M_9b1c7662
+E_bda100aa --> M_9d337ade
+E_bda100aa --> M_a2485d5e
+E_bda100aa --> M_a2980881
+E_bda100aa --> M_a67f7d77
+E_bda100aa --> M_a859f259
+E_bda100aa --> M_abf3e49f
+E_bda100aa --> M_ae890318
+E_bda100aa --> M_ae91eb15
+E_bda100aa --> M_b0a490a4
+E_bda100aa --> M_b8e6fc1d
+E_bda100aa --> M_bc013853
+E_bda100aa --> M_bee6136f
+E_bda100aa --> M_c86abba8
+E_bda100aa --> M_c8daccad
+E_bda100aa --> M_cc32c68e
+E_bda100aa --> M_cd9eb8e3
+E_bda100aa --> M_d722c7b9
+E_bda100aa --> M_d8ea8485
+E_bda100aa --> M_dc2a8884
+E_bda100aa --> M_dcfbc632
+E_bda100aa --> M_dd620ca1
+E_bda100aa --> M_e00732a6
+E_bda100aa --> M_e2e37362
+E_bda100aa --> M_e3a7c980
+E_bda100aa --> M_f67a74e4
+E_bda100aa --> M_f7e8ef26
+E_bda100aa --> M_ff17c53a
+S_09c3a61a --> E_0d5e9cd7
+S_0dce94e9 --> E_7e33db52
+S_4b0a7eb8 --> E_0d5e9cd7
+S_4c136a10 --> E_7e33db52
+S_7ff6c8db --> E_0d5e9cd7
+S_80e08027 --> E_bda100aa
+S_88b81d7f --> E_7e33db52
+S_8c39c93c --> E_bda100aa
+S_8cab65da --> E_7e33db52
+S_b2c93123 --> E_bda100aa
+S_b4d68660 --> E_bda100aa
+S_da46bed1 --> E_0d5e9cd7
+S_db24b269 --> E_7e33db52
+S_ee021d8d --> E_bda100aa
+@enduml
